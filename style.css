@@ -94,6 +94,118 @@ h1 {
   line-height: 1.7;
 }
 
+.pricing {
+  padding-top: 28px;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  align-items: stretch;
+}
+
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #dde6f0;
+  border-radius: 18px;
+  padding: 26px 22px;
+  box-shadow: 0 10px 25px rgba(17, 24, 39, 0.04);
+}
+
+.pricing-card.featured {
+  border-color: #8ac7ff;
+  box-shadow: 0 18px 35px rgba(73, 120, 215, 0.12);
+  transform: translateY(-4px);
+}
+
+.plan-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  padding: 0.42rem 0.7rem;
+  border-radius: 999px;
+  background: #edf5ff;
+  color: #235da3;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.pricing-card h3 {
+  margin: 18px 0 0;
+  font-size: 1.8rem;
+}
+
+.price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin: 20px 0 16px;
+}
+
+.price span {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #1b2736;
+}
+
+.price small {
+  color: #5b6d80;
+  font-size: 0.95rem;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+  display: grid;
+  gap: 12px;
+  color: #4a5d73;
+  line-height: 1.6;
+}
+
+.pricing-card li {
+  position: relative;
+  padding-left: 22px;
+}
+
+.pricing-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #1aa76d;
+  font-weight: 700;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #1a73e8, #64b5f6);
+  color: #fff;
+}
+
+.button-secondary {
+  background: #eef5ff;
+  color: #1f3350;
+}
+
 @media (max-width: 760px) {
   main {
     padding: 32px 16px 48px;
@@ -103,11 +215,13 @@ h1 {
     padding-top: 28px;
   }
 
-  .feature-grid {
+  .feature-grid,
+  .pricing-grid {
     grid-template-columns: 1fr;
   }
 
-  .feature-card {
+  .feature-card,
+  .pricing-card {
     padding: 22px 18px;
   }
 }
